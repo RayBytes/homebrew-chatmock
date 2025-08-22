@@ -13,7 +13,7 @@ class Chatmock < Formula
   def install
     virtualenv_create(libexec, "python3.11")
 
-    system libexec/"bin/pip", "install", "-r", "requirements.txt"
+    system libexec/"bin/python", "-m", "pip", "install", "-r", "requirements.txt"
 
     libexec.install "chatmock/"
     libexec.install "chatmock.py"
