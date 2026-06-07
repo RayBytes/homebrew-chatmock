@@ -3,8 +3,8 @@ class Chatmock < Formula
 
   desc "OpenAI & Ollama compatible API powered by your ChatGPT plan"
   homepage "https://github.com/RayBytes/ChatMock"
-  url "https://github.com/RayBytes/ChatMock/archive/refs/tags/v1.36.tar.gz"
-  sha256 "7deda9adb8acf79379039a4cb0f4a13b592804e9b60083d3929cc992e0da0890"
+  url "https://github.com/RayBytes/ChatMock/archive/refs/tags/v1.38.tar.gz"
+  sha256 "57dbed104cd10975e991c9b28dc51c467abc7a9d92a9d5ba03f693cadcbd71c4"
   license "MIT"
   head "https://github.com/RayBytes/ChatMock.git", branch: "main"
 
@@ -12,7 +12,7 @@ class Chatmock < Formula
 
   def install
     virtualenv_create(libexec, "python3.11")
-    system libexec/"bin/python", "-m", "pip", "install", "."
+    system libexec/"bin/pip", "install", "."
     bin.install_symlink libexec/"bin/chatmock"
   end
 
